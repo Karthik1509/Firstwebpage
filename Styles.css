@@ -87,6 +87,13 @@ body {
 .bottom-nav {
   display: none;
 }
+@media (max-width: 700px) {
+  .toggle-btn {
+    right: 15px;
+    left: auto;
+  }
+}
+
 
 @media (max-width: 700px) {
   .sidebar {
