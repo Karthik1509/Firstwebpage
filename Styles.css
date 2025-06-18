@@ -142,7 +142,15 @@ body {
   .sidebar li {
     text-align: center;
     justify-content: center;
+    
   }
+  @media (max-width: 400px) {
+  .toggle-btn {
+    right: 15px;
+    left: auto;
+  }
+}
+
 
   .sidebar i {
     margin-right: 0;
