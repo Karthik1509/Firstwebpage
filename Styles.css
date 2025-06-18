@@ -6,7 +6,8 @@ body {
 
 .sidebar {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 250px;
   height: 100%;
   background: #fff;
@@ -66,6 +67,7 @@ body {
   line-height: 30px;
   cursor: pointer;
   transition: background 0.2s, left 0.3s;
+  z-index: 1001;
 }
 
 .sidebar.collapsed ~ .toggle-btn {
@@ -87,13 +89,6 @@ body {
 .bottom-nav {
   display: none;
 }
-@media (max-width: 700px) {
-  .toggle-btn {
-    right: 15px;
-    left: auto;
-  }
-}
-
 
 @media (max-width: 700px) {
   .sidebar {
@@ -101,7 +96,12 @@ body {
   }
 
   .toggle-btn {
-    display: none;
+    display: block !important;
+    right: 15px;
+    left: auto;
+    position: fixed;
+    top: 15px;
+    z-index: 1001;
   }
 
   .content {
@@ -142,17 +142,19 @@ body {
   .sidebar li {
     text-align: center;
     justify-content: center;
-    
   }
-  @media (max-width: 400px) {
-  .toggle-btn {
-    right: 15px;
-    left: auto;
-  }
-}
-
 
   .sidebar i {
     margin-right: 0;
   }
+
+  .toggle-btn {
+    right: 15px;
+    left: auto;
+    display: block !important;
+    position: fixed;
+    top: 15px;
+    z-index: 1001;
+  }
 }
+
